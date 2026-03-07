@@ -1,0 +1,62 @@
+[
+  {
+    "document_id": "doc-001",
+    "title": "Alpha Architecture Guide",
+    "author": "Alice Smith",
+    "library_id": "lib-aaa",
+    "group_id": "grp-001",
+    "security_level": "public",
+    "doc_type": "pdf",
+    "language": "en",
+    "status": "active",
+    "ingested_at": "2026-01-10T08:00:00Z"
+  },
+  {
+    "document_id": "doc-002",
+    "title": "Beta Security Handbook",
+    "author": "Bob Jones",
+    "library_id": "lib-bbb",
+    "group_id": "grp-001",
+    "security_level": "internal",
+    "doc_type": "pdf",
+    "language": "en",
+    "status": "active",
+    "ingested_at": "2026-01-15T09:00:00Z"
+  },
+  {
+    "document_id": "doc-003",
+    "title": "Gamma Reference Manual",
+    "author": "Carol Díaz",
+    "library_id": "lib-aaa",
+    "group_id": "grp-002",
+    "security_level": "protected",
+    "doc_type": "docx",
+    "language": "es",
+    "status": "active",
+    "ingested_at": "2026-02-01T12:00:00Z"
+  },
+  {
+    "document_id": "doc-004",
+    "title": "Delta Release Notes",
+    "author": "Dave Kim",
+    "library_id": "lib-bbb",
+    "group_id": "grp-002",
+    "security_level": "public",
+    "doc_type": "txt",
+    "language": "en",
+    "status": "archived",
+    "ingested_at": "2026-02-10T15:00:00Z"
+  },
+  {
+    "document_id": "doc-005",
+    "title": "Epsilon Data Dictionary",
+    "author": null,
+    "library_id": "lib-aaa",
+    "group_id": "grp-001",
+    "security_level": "internal",
+    "doc_type": "csv",
+    "language": "en",
+    "status": "active",
+    "ingested_at": "2026-03-01T10:00:00Z"
+  }
+]

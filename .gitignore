@@ -1,0 +1,17 @@
+# Virtual environment
+.venv/
+
+# Editor
+.vscode/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Local scaffold symlinks (created by run_tests.sh setup)
+backend/
+tools
+
+# OS
+.DS_Store
