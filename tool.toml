@@ -8,10 +8,8 @@ enabled_by_default = false
 
 # ─── API ──────────────────────────────────────────────────────────────────────
 [api]
-# The router defines its own prefix ("/v1/tools/document_catalog_query"), so
-# mount_prefix is empty to avoid double-prefixing.
 router_import = "document_catalog_query.api.router:router"
-mount_prefix  = ""
+mount_prefix  = "/tools/document-catalog-query"
 tags          = ["tools:document_catalog_query"]
 
 # ─── Agent Tool ───────────────────────────────────────────────────────────────
