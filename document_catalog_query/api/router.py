@@ -15,9 +15,10 @@ Error mapping:
 """
 from __future__ import annotations
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from fastapi.responses import JSONResponse
 
+from document_catalog_query.api.deps import get_catalog_records
 from document_catalog_query.api.schemas import (
     DocumentRecord,
     HealthResponse,
@@ -72,9 +73,12 @@ def document_catalog_query_health() -> HealthResponse:
 )
 def document_catalog_query_query(
     request: QueryRequest,
+    catalog_records: list[dict] = Depends(get_catalog_records),
 ) -> QueryResponse | JSONResponse:
     try:
-        records = _load_records(request.catalog_file)
+        # Platform DB-loader provides records; fall back to file-based loader
+        # (standalone / test mode) when no platform records are injected.
+        records = catalog_records if catalog_records else _load_records(request.catalog_file)
         result = service.query_documents(
             records,
             document_id=request.document_id,
