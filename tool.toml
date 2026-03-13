@@ -34,6 +34,13 @@ requires_db                 = true
 [capabilities]
 actions = ["health", "query"]
 
+# ─── Runtime Adapters ────────────────────────────────────────────────────────
+# document_catalog_query reads from TechVault's documents table at runtime.
+# No tool-owned Alembic tables; no database.metadata_import needed.
+[[techvault.adapters]]
+dependency_import      = "document_catalog_query.api.deps:get_catalog_records"
+override_factory_import = "backend.platform.tool_adapters.document_catalog_query:get_catalog_records_override"
+
 # ─── Template Stamp ───────────────────────────────────────────────────────────
 
 [template]
