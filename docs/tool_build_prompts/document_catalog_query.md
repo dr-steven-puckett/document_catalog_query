@@ -26,10 +26,10 @@ It must not duplicate semantic search or RAG endpoints.
 
 ## Assumptions
 
-- The canonical implementation pattern is defined by the template repository at:
-  `/home/spuckett1/projects/tools/techvault_tool_template`
+- The canonical implementation pattern was defined by the template repository at:
+  `/home/spuckett1/projects/tools/techvault_tool_template` (historical reference; not required for deployment)
 - The tool must be a standalone repository compatible with the deterministic tool factory pipeline
-- The tool will be integrated through standard TechVault platform registration files rather than custom platform changes
+- The tool is integrated via TechVault auto-discovery (presence of `tool.toml` under `backend/tools/document_catalog_query/`); no manual platform registration files are required
 - The TechVault schema already contains document metadata sufficient to support deterministic document catalog browsing
 - The `documents` table is the primary source for document-level metadata
 - Additional joins should be minimized and used only if required by the existing schema or template conventions

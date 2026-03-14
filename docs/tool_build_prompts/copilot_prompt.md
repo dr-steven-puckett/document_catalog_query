@@ -1,3 +1,7 @@
+> **Note:** This is a historical archive of the Copilot prompt used to generate this tool.
+> The template repository path (`techvault_tool_template`) is no longer needed for integration or deployment.
+> TechVault discovers this tool automatically via `tool.toml`; no template inspection is required at runtime.
+
 Build a new deterministic TechVault tool repository named `document_catalog_query` using the canonical tool template repository at:
 
 `/home/spuckett1/projects/tools/techvault_tool_template`
