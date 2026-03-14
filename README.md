@@ -78,8 +78,10 @@ POST /v1/tools/document_catalog_query/query
 
 ## Deployment
 
-Add `document_catalog_query` to `backend/platform/enabled_tools.toml` and
-place this repo under `backend/tools/document_catalog_query/`.
+Place this repo (or add it as a Git submodule) under `backend/tools/document_catalog_query/`.
+TechVault discovers it automatically by finding `tool.toml`. Activation is determined
+first by local TechVault operator overrides and otherwise by `enabled_by_default` in
+`tool.toml`. Invalid manifests are surfaced clearly and not silently activated.
 
 ## Tests
 

@@ -2,7 +2,7 @@
 
 **Tool ID:** `document_catalog_query`
 **Type:** Standalone deterministic tool repository (read-only metadata query)
-**Integration:** Added to TechVault via standard platform registration.
+**Integration:** Auto-discovered by TechVault when the repository is present under `backend/tools/document_catalog_query/` and contains a valid `tool.toml`. Activation is controlled by local TechVault operator overrides or `enabled_by_default` in `tool.toml`.
 **This document is the single source of truth.** Implementations MUST match this spec.
 
 ---

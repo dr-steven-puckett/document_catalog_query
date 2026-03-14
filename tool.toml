@@ -1,9 +1,13 @@
 # ─── Identity ─────────────────────────────────────────────────────────────────
 # 'name' must match the folder name under backend/tools/ used by the platform
-# manifest loader.
+# discovery loader.
 tool_id            = "document_catalog_query"
 name               = "document_catalog_query"
 version            = "0.1.0"
+# TechVault auto-discovers this tool when the repo is present under
+# backend/tools/document_catalog_query/ and contains a valid tool.toml.
+# Activation is determined first by local TechVault operator overrides,
+# and otherwise by this field. Set false for conservative default.
 enabled_by_default = false
 
 # ─── API ──────────────────────────────────────────────────────────────────────
@@ -40,6 +44,11 @@ actions = ["health", "query"]
 [[techvault.adapters]]
 dependency_import      = "document_catalog_query.api.deps:get_catalog_records"
 override_factory_import = "backend.platform.tool_adapters.document_catalog_query:get_catalog_records_override"
+
+# ─── Platform Metadata ──────────────────────────────────────────────────────
+
+[platform]
+contract_version = "1"
 
 # ─── Template Stamp ───────────────────────────────────────────────────────────
 

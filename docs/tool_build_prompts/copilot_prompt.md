@@ -142,16 +142,14 @@ Follow template and platform conventions for:
 - manifest naming
 - API registration
 - router registration
-- enabled tools integration
 - CLI entrypoint naming
 - canonical JSON output
 - OpenAPI generation / snapshotting
 
-Use existing platform conventions from:
-- `backend/platform/enabled_tools.toml`
-- `backend/platform/tool_manifests.py`
-- `backend/platform/tools_registry.py`
-- `backend/platform/tools_api_registry.py`
+TechVault discovers this tool automatically when the repository is present under
+`backend/tools/document_catalog_query/` and contains a valid `tool.toml`. Activation
+is determined first by local TechVault operator overrides and otherwise by
+`enabled_by_default` in `tool.toml`.
 
 Do not invent alternate registration mechanisms.
 
