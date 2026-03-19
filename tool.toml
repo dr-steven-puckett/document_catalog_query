@@ -8,7 +8,7 @@ version            = "0.1.0"
 # backend/tools/document_catalog_query/ and contains a valid tool.toml.
 # Activation is determined first by local TechVault operator overrides,
 # and otherwise by this field. Set false for conservative default.
-enabled_by_default = false
+enabled_by_default = true
 
 # ─── API ──────────────────────────────────────────────────────────────────────
 [api]
